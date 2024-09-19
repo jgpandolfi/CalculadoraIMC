@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de IMC</title>
+
+    <!-- Metatags importantes para SEO e sobre informações da página -->
+    <meta name="description" content="Calculadora de IMC fácil de usar. Insira seu peso e altura para calcular seu Índice de Massa Corporal e saber se está no peso ideal.">
+    <meta name="keywords" content="IMC, calculadora de IMC, saúde, peso ideal, índice de massa corporal, fitness, calculadora IMC, peso">
+    <meta name="author" content="Jota / José Guilherme Pandolfi">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Language" content="pt-BR">
+
+    <!-- Metatags para responsividade e compatibilidade entre browsers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/android-chrome-512x512.png">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-TileImage" content="assets/mstile-144x144.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+
+    <!-- Cor da barra de ferramentas do navegador em dispositivos móveis -->
+    <meta name="theme-color" content="#f1f1f1">
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "o5hv8tuqyz");
+    </script>
+
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:title" content="Calculadora de IMC">
+    <meta property="og:description" content="Calculadora de IMC fácil de usar. Insira seu peso e altura para calcular seu Índice de Massa Corporal e saber se está no peso ideal.">
+    <meta property="og:image" content="URL-DA-IMAGEM.jpg">
+    <meta property="og:url" content="URL-DO-SEU-SITE">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter Card (Twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Calculadora de IMC">
+    <meta name="twitter:description" content="Calculadora de IMC fácil de usar. Insira seu peso e altura para calcular seu Índice de Massa Corporal e saber se está no peso ideal.">
+    <meta name="twitter:image" content="URL-DA-IMAGEM.jpg">
+    <meta name="twitter:site" content="@SEU_USUARIO_NO_TWITTER">
+
+    <!-- Geolocalização -->
+    <meta name="geo.region" content="BR-SP">
+    <meta name="geo.placename" content="Araraquara">
+    <meta name="geo.position" content="-21.794758;-48.175239">
+    <meta name="ICBM" content="-21.794758, -48.175239">
+
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de IMC</h1>
+        <p>Descubra seu <b>Índice de Massa Corporal</b> e saiba se você está no peso ideal.</p>
+    </header>
+
+    <main>
+        <section>
+            <div id="container-calculadora">
+                <form id="form-container">
+                    <fieldset>
+                        <div>
+                            <label for ="peso"><b>Seu peso</b> (KG):</label>
+                            <input id="peso" type="number" name="peso" placeholder="60.0" min="20" max="250" step="0.1" aria-label="Digite seu peso em quilogramas" required>
+                        </div>
+
+                        <div>
+                            <label for ="altura"><b>Sua altura</b> (metros):</label>
+                            <input id="altura" type="number" name="altura" placeholder="1.60" min="1" max="2.30" step="0.01" aria-label="Digite sua altura em metros" required>
+                        </div>
+
+                        <div id="div-btn">
+                            <button type="submit" aria-label="Clique para calcular seu IMC">Calcular IMC</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <p id="label-valor-imc" hidden>Seu IMC é:</p>
+                <p id="valor-imc" hidden></p>
+                <p id="label-faixa-imc" hidden>Atualmente você está na faixa de classificação de IMC:</p>
+                <p id="faixa-imc" hidden></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por<br><a href="https://hub.agenciam2a.com.br/?utm_source=Calculadora%20de%20IMC" target="_blank" rel="noopener noreferrer">Jota / José Guilherme Pandolfi</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="scripts.js" defer></script>
+</body>

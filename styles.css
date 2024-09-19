@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset CSS: Configuração padrão para padronizar o layout entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Declaração das variáveis CSS */
+:root {
+    --cor-primaria: #45A049;
+    --cor-secundaria: #4CAF50;
+    --cor-faixa-imc: #333
+}
+
+html, body {
+    height: 100%;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Cabeçalho da página e parágrafo exibidos antes da calculadora */
+h1, p {
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 284px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-top: 20%;
+    color: var(--cor-primaria);
+}
+
+/* Estrutura do container da calculadora */
+#container-calculadora {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 104%;
+}
+
+/* Estilização do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    fieldset div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    fieldset #div-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+fieldset {
+    border: none;
+}
+
+label {
+    margin-bottom: 12px;
+    color: var(--cor-primaria);
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px;
+    background-color: var(--cor-secundaria);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--cor-primaria);
+}
+
+/* Textos dos resultados calculados */
+#label-valor-imc {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+#valor-imc {
+    font-weight: bold;
+    font-size: 2.4rem;
+    text-align: center;
+    padding-top: 4px;
+    color: var(--cor-faixa-imc);
+}
+
+#label-faixa-imc, #faixa-imc {
+    max-width: 284px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#faixa-imc {
+    font-weight: bold;
+    color: var(--cor-faixa-imc);
+}
+
+/* Estilo do rodapé */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #555;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="number"], button {
+        font-size: 0.9rem;
+    }
+
+    #container-calculadora {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    input[type="number"], button {
+        font-size: 0.8rem;
+    }
+}
